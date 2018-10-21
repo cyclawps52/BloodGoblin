@@ -1,0 +1,44 @@
+require 'msf/core'
+require 'rex'
+require 'msf/core/post/common'
+ 
+class MetasploitModule < Msf::Post
+ 
+ include Msf::Post::Common
+
+ def initialize(info={})
+     super( update_info( info,
+         'Name' => 'Doge MOTD (Blood Goblin)',
+         'Description' => %q{
+             Sets a linux MOTD to a doge icon.
+         },
+         'License' => MSF_LICENSE,
+         'Author' => [
+             'Tristan Fletcher #Cyclawps52',
+         ],
+         'Platform' => ['unix', 'linux'],
+         'SessionTypes' => [ 'meterpreter', 'shell' ]
+     ))
+   
+ end
+ 
+ # Main method
+ def run
+
+    commandToRun = "unlink /etc/motd"
+    commandToRun = %q{
+        echo -n "ICAgICAgICAgICAgICAgICAgICAgICAgICAgIDtcIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgfCcgXCAKICAgICAgICAgXyAgICAgICAgICAgICAgICAgIDsgOiA7IAogICAgICAgIC8gYC0uICAgICAgICAgICAgICAvOiA6IHwgCiAgICAgICB8ICAsLS5gLS4gICAgICAgICAgLCc6IDogfCAKICAgICAgIFwgIDogIGAuIGAuICAgICAgICwnLS4gOiB8IAogICAgICAgIFwgOyAgICA7ICBgLS5fXywnICAgIGAtLnwgCiAgICAgICAgIFwgOyAgIDsgIDo6OiAgLDo6J2A6LiAgYC4gCiAgICAgICAgICBcIGAtLiA6ICBgICAgIDouICAgIGAuICBcIAogICAgICAgICAgIFwgICBcICAgICwgICA7ICAgLDogICAgKFwgCiAgICAgICAgICAgIFwgICA6LiwgOi4gICAgLCdvKSk6IGAgYC0uIAogICAgICAgICAgICwvLCcgOycgLDo6IidgLmAtLS0nICAgYC4gIGAtLl8gCiAgICAgICAgICwvICA6ICA7ICciICAgICAgYDsnICAgICAgICAgICwtLWAuIAogICAgICAgIDsvICAgOjsgOyAgICAgICAgICAgICAsOicgICAgICggICAsOikgCiAgICAgICAgICAsLiw6LiAgICA7ICw6LiwgICwtLl8gYC4gICAgIFwiIicvIAogICAgICAgICAgJzo6JyAgICAgYDonYCAgLCcoICBcYC5fX19fXy4tJyInIAogICAgICAgICAgICAgOywgICA7ICBgLiAgYC4gYC5fYC0uICBcXCAKICAgICAgICAgICAgIDs6LiAgOzogICAgICAgYC0uX2AtLlwgIFxgLiAKICAgICAgICAgICAgICAnYDouIDogICAgICAgIHwnIGAuIGBcICApIFwgCiAgICAtIGJvcmsgICAgICAgYCA7OiAgICAgICB8ICAgIGAtLVxfXywnIAogICAgICAgICAgICAgICAgICAgJ2AgICAgICAsJyAKICAgICAgICAgICAgICAgICAgICAgICAgLC0nIAo=" | base64 -d > /etc/motd
+    }
+    cmd_exec(commandToRun)
+
+    # commandToRun = %q{
+    #     echo -n "ICAgICAgICAgICAgICAgICAgICAgICAgICAgIDtcIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgfCcgXCAKICAgICAgICAgXyAgICAgICAgICAgICAgICAgIDsgOiA7IAogICAgICAgIC8gYC0uICAgICAgICAgICAgICAvOiA6IHwgCiAgICAgICB8ICAsLS5gLS4gICAgICAgICAgLCc6IDogfCAKICAgICAgIFwgIDogIGAuIGAuICAgICAgICwnLS4gOiB8IAogICAgICAgIFwgOyAgICA7ICBgLS5fXywnICAgIGAtLnwgCiAgICAgICAgIFwgOyAgIDsgIDo6OiAgLDo6J2A6LiAgYC4gCiAgICAgICAgICBcIGAtLiA6ICBgICAgIDouICAgIGAuICBcIAogICAgICAgICAgIFwgICBcICAgICwgICA7ICAgLDogICAgKFwgCiAgICAgICAgICAgIFwgICA6LiwgOi4gICAgLCdvKSk6IGAgYC0uIAogICAgICAgICAgICwvLCcgOycgLDo6IidgLmAtLS0nICAgYC4gIGAtLl8gCiAgICAgICAgICwvICA6ICA7ICciICAgICAgYDsnICAgICAgICAgICwtLWAuIAogICAgICAgIDsvICAgOjsgOyAgICAgICAgICAgICAsOicgICAgICggICAsOikgCiAgICAgICAgICAsLiw6LiAgICA7ICw6LiwgICwtLl8gYC4gICAgIFwiIicvIAogICAgICAgICAgJzo6JyAgICAgYDonYCAgLCcoICBcYC5fX19fXy4tJyInIAogICAgICAgICAgICAgOywgICA7ICBgLiAgYC4gYC5fYC0uICBcXCAKICAgICAgICAgICAgIDs6LiAgOzogICAgICAgYC0uX2AtLlwgIFxgLiAKICAgICAgICAgICAgICAnYDouIDogICAgICAgIHwnIGAuIGBcICApIFwgCiAgICAtIGJvcmsgICAgICAgYCA7OiAgICAgICB8ICAgIGAtLVxfXywnIAogICAgICAgICAgICAgICAgICAgJ2AgICAgICAsJyAKICAgICAgICAgICAgICAgICAgICAgICAgLC0nIAo=" | base64 -d > /var/run/motd
+    # }
+    # cmd_exec(commandToRun)
+
+    print_status("MOTD changed!")
+
+
+ end
+ 
+end
