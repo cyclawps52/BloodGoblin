@@ -34,7 +34,7 @@ This is a collection of Metasploit post modules designed for automating some Red
 
 ## How to install
 
-1. Clone the repo (or download a specific release from the [releases page](https://github.com/cyclawps52/BloodGoblin-Public/releases))
+1. Clone the repo (or download a specific release from the [releases page](https://github.com/cyclawps52/BloodGoblin/releases))
 2. `cat Source/install.sh | bash`
 
 The `rs` directory has been simlinked to `/bgrs` (Blood Goblin Resource Scripts) for easier access inside Metasploit.
@@ -45,13 +45,13 @@ NOTE: this repo is designed to be run with the `root` user on a standard Kali in
 
 | Module name | Target OS | Description | Link |
 | - | - | - | - |
-| aliasBomb | linux | Aliases all binaries in 3 directories to `vi` | [link](https://github.com/cyclawps52/BloodGoblin-Public/blob/master/Source/modules/post/linux/manage/aliasBomb.rb) |
-| dogeMOTD | linux | Replaces the MOTD with a lovely doggo | [link](https://github.com/cyclawps52/BloodGoblin-Public/blob/master/Source/modules/post/linux/manage/dogeMOTD.rb) |
-| RedMBR | linux (planned multi in future) | [This one deserves its own repo, check it out here](https://github.com/cyclawps52/RedMBR) | [link](https://github.com/cyclawps52/BloodGoblin-Public/blob/master/Source/modules/post/linux/manage/RedMBR.rb) |
-| Message Box | multi | Displays a `msg` box on windows to all users or outputs to `wall` on linux | [link](https://github.com/cyclawps52/BloodGoblin-Public/blob/master/Source/modules/post/multi/manage/messageBox.rb) |
-| Calc | windows | Spawns calc.exe on a windows desktop (requires migrated session) | [link](https://github.com/cyclawps52/BloodGoblin-Public/blob/master/Source/modules/post/windows/manage/calc.rb) |
-| Screen Resoultion | windows | Changes the windows screen resolution based on given parameters | [link](https://github.com/cyclawps52/BloodGoblin-Public/blob/master/Source/modules/post/windows/manage/screenRes.rb) |
-| Multi Post Runner | multi | Allows a post module to be ran against all active sessions that match the specified target parameter of the post module | [link](https://github.com/cyclawps52/BloodGoblin-Public/blob/master/Source/rs/multiPost/multiPost.rc) |
+| aliasBomb | linux | Aliases all binaries in 3 directories to `vi` | [link](https://github.com/cyclawps52/BloodGoblin/blob/master/Source/modules/post/linux/manage/aliasBomb.rb) |
+| dogeMOTD | linux | Replaces the MOTD with a lovely doggo | [link](https://github.com/cyclawps52/BloodGoblin/blob/master/Source/modules/post/linux/manage/dogeMOTD.rb) |
+| RedMBR | linux (planned multi in future) | [This one deserves its own repo, check it out here](https://github.com/cyclawps52/RedMBR) | [link](https://github.com/cyclawps52/BloodGoblin/blob/master/Source/modules/post/linux/manage/RedMBR.rb) |
+| Message Box | multi | Displays a `msg` box on windows to all users or outputs to `wall` on linux | [link](https://github.com/cyclawps52/BloodGoblin/blob/master/Source/modules/post/multi/manage/messageBox.rb) |
+| Calc | windows | Spawns calc.exe on a windows desktop (requires migrated session) | [link](https://github.com/cyclawps52/BloodGoblin/blob/master/Source/modules/post/windows/manage/calc.rb) |
+| Screen Resoultion | windows | Changes the windows screen resolution based on given parameters | [link](https://github.com/cyclawps52/BloodGoblin/blob/master/Source/modules/post/windows/manage/screenRes.rb) |
+| Multi Post Runner | multi | Allows a post module to be ran against all active sessions that match the specified target parameter of the post module | [link](https://github.com/cyclawps52/BloodGoblin/blob/master/Source/rs/multiPost/multiPost.rc) |
 
 ## Hidden Modules
 
