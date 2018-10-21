@@ -34,7 +34,7 @@ This is a collection of Metasploit post modules designed for automating some Red
 
 ## How to install
 
-1. Clone the repo
+1. Clone the repo (or download a specific release from the [releases page](https://github.com/cyclawps52/BloodGoblin-Public/releases))
 2. `cat Source/install.sh | bash`
 
 The `rs` directory has been simlinked to `/bgrs` (Blood Goblin Resource Scripts) for easier access inside Metasploit.
