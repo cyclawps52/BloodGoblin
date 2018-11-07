@@ -56,9 +56,13 @@ NOTE: this repo is designed to be run with the `root` user on a standard Kali in
 ## Hidden Modules
 
 * persistence.rb (a simple linux persistence script with several various tactics)
-* foothold.rc (automated recon and initial exploitation vector)
+* footholdLinux.rc (automated recon and initial exploitation vector for Linux)
+* footholdWindows.rc (automated recon and initial exploitation vector for Windows)
+* footholdMaster.rc (combines both of the previous footholds together, nothing additional added to it)
 
 Again, please feel free to contact me if you want further information about these modules.
+
+**IF YOU ARE A DSU RED TEAMER AND WISH TO USE THE ACTUAL VERSION OF THIS, PLEASE MESSAGE ME ON SLACK!**
 
 ## How to use multiPost.rc:
 
