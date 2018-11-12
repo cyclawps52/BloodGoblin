@@ -59,6 +59,7 @@ NOTE: this repo is designed to be run with the `root` user on a standard Kali in
 * footholdLinux.rc (automated recon and initial exploitation vector for Linux)
 * footholdWindows.rc (automated recon and initial exploitation vector for Windows)
 * footholdMaster.rc (combines both of the previous footholds together, nothing additional added to it)
+* handlerGen.rc (starts metasploit handlers and generates custom obfusicated payloads to a tmp directory)
 
 Again, please feel free to contact me if you want further information about these modules.
 
