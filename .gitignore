@@ -1,4 +1,10 @@
 .DS_Store
+
 persistence.rb
+backdoorNull.rb
+uidBin.rb
+daemonBackdoor.rb
+iptableKill.rb
+
 foothold/
 handler/

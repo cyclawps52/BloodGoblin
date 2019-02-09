@@ -3,7 +3,6 @@ framework.sessions.each do |num,session|
 run_single("set SESSION #{num}")
 print_status("Running #{active_module.fullname} on session #{num}")
 print_status("---------------------------------------------------")
-run_single("run -j")
-sleep 1
+run_single("run")
 end
 </ruby>
